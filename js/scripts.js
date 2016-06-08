@@ -3,6 +3,7 @@ $(document).ready(function(){
   $(".result").hide();
   $(".form").submit(function(event){
     event.preventDefault();
+    $(".groceries").empty(); // empties class or id
     var userInput = $("#input").val(); //saves form value
     var inputCapitalized = userInput.toUpperCase(); //capitalizes string
     resultArray = inputCapitalized.split(" "); //splits all words into array
